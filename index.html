@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaden Battle Royale Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="arena-shell">
+      <section class="hero">
+        <div class="copy">
+          <p class="eyebrow">Prototype 10 • Battle royale island</p>
+          <h1>Kaden Battle Royale</h1>
+          <p>
+            A colorful drop-in island game inspired by Fortnite's battle royale
+            loop: choose a landing spot, loot chests, build cover, dodge the storm,
+            win bot battles, and unlock silly skins without realistic violence.
+          </p>
+          <div class="mode-strip" aria-label="Match settings">
+            <span>Solo Bot Royale</span>
+            <span>12 Players</span>
+            <span>3 Storm Phases</span>
+          </div>
+          <div class="actions">
+            <button id="startMatch" type="button">Launch Battle Bus</button>
+            <button id="dropZone" class="blue" type="button">Mark Drop Zone</button>
+            <button id="openLocker" class="ghost" type="button">Open Locker</button>
+          </div>
+        </div>
+
+        <div class="game-card" aria-label="Arena map mockup">
+          <div class="hud">
+            <span id="hp">HP 100</span>
+            <span id="shield">Shield 50</span>
+            <span id="players">Players 12</span>
+            <span id="stormTimer">Storm 02:00</span>
+          </div>
+          <div class="bus">Battle Bus</div>
+          <div class="map">
+            <span class="poi p1">Loot Lake</span>
+            <span class="poi p2">Blaster Bay</span>
+            <span class="poi p3">Build Barn</span>
+            <span class="poi p4">Coin Ridge</span>
+            <span class="storm"></span>
+            <span class="safe-zone">Safe Zone</span>
+            <span class="player"></span>
+            <span class="bot b1"></span>
+            <span class="bot b2"></span>
+            <span class="bot b3"></span>
+            <span class="crate c1"></span>
+            <span class="crate c2"></span>
+            <span class="crate c3"></span>
+            <span class="build wall w1"></span>
+            <span class="build ramp w2"></span>
+            <span class="drop-pin" id="pin"></span>
+          </div>
+          <div class="quickbar" aria-label="Inventory quickbar">
+            <span>Foam Blaster</span>
+            <span>Bounce Pad</span>
+            <span>Shield Pop</span>
+            <span>Wood 120</span>
+            <span>Brick 60</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="battle-panel">
+        <article class="mission">
+          <h2>Match Flow</h2>
+          <ol>
+            <li>Ride the battle bus and choose a landing marker.</li>
+            <li>Loot chests for shields, bounce pads, and foam blasters.</li>
+            <li>Build quick cover using wood and brick.</li>
+            <li>Stay inside the safe zone while the storm closes.</li>
+            <li>Win the final bot duel to earn XP and cosmetics.</li>
+          </ol>
+        </article>
+        <article>
+          <h2>Kid-Safe Combat</h2>
+          <p>No realistic weapons or gore. Foam darts, paint bursts, shields, goofy knockback, and respawn practice keep it arcade-like.</p>
+        </article>
+        <article>
+          <h2>Battle Pass Ideas</h2>
+          <p>Unlock astronaut helmets, neon sneakers, glider trails, dance emotes, backpack charms, and custom island flags.</p>
+        </article>
+      </section>
+
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
