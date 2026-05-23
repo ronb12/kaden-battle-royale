@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kaden Battle Royale Prototype</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./app-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;700;800&display=swap" rel="stylesheet" />
@@ -13,12 +15,12 @@
     <main class="arena-shell">
       <section class="hero">
         <div class="copy">
-          <p class="eyebrow">Prototype 10 • Battle royale island</p>
+          <p class="eyebrow">Frontend Differentiation Pass</p>
           <h1>Kaden Battle Royale</h1>
           <p>
-            A colorful drop-in island game inspired by Fortnite's battle royale
-            loop: choose a landing spot, loot chests, build cover, dodge the storm,
-            win bot battles, and unlock silly skins without realistic violence.
+            A colorful island-battle game with a real game shell: scout the island,
+            run the match loop, manage the locker, and track battle-pass progress
+            instead of squeezing everything into one long prototype page.
           </p>
           <div class="mode-strip" aria-label="Match settings">
             <span>Solo Bot Royale</span>
@@ -68,26 +70,14 @@
         </div>
       </section>
 
-      <section class="battle-panel">
-        <article class="mission">
-          <h2>Match Flow</h2>
-          <ol>
-            <li>Ride the battle bus and choose a landing marker.</li>
-            <li>Loot chests for shields, bounce pads, and foam blasters.</li>
-            <li>Build quick cover using wood and brick.</li>
-            <li>Stay inside the safe zone while the storm closes.</li>
-            <li>Win the final bot duel to earn XP and cosmetics.</li>
-          </ol>
-        </article>
-        <article>
-          <h2>Kid-Safe Combat</h2>
-          <p>No realistic weapons or gore. Foam darts, paint bursts, shields, goofy knockback, and respawn practice keep it arcade-like.</p>
-        </article>
-        <article>
-          <h2>Battle Pass Ideas</h2>
-          <p>Unlock astronaut helmets, neon sneakers, glider trails, dance emotes, backpack charms, and custom island flags.</p>
-        </article>
-      </section>
+      <nav class="subnav" aria-label="Kaden Battle Royale views">
+        <button class="subnav-tab active" type="button" data-tab="island">Island</button>
+        <button class="subnav-tab" type="button" data-tab="match">Match</button>
+        <button class="subnav-tab" type="button" data-tab="locker">Locker</button>
+        <button class="subnav-tab" type="button" data-tab="pass">Pass</button>
+      </nav>
+
+      <section id="app" class="app-shell" aria-live="polite"></section>
 
       <div id="toast" class="toast" role="status" aria-live="polite"></div>
     </main>

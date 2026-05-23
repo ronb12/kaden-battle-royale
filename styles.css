@@ -32,6 +32,15 @@ body {
   padding: 34px 0;
 }
 
+.subnav,
+.app-shell,
+.panel-card {
+  border: 3px solid #111827;
+  border-radius: 28px;
+  background: var(--panel);
+  box-shadow: 10px 10px 0 #111827;
+}
+
 .hero {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -91,6 +100,30 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.subnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 16px;
+}
+
+.subnav-tab,
+.ghost-action {
+  border: 2px solid #111827;
+  border-radius: 999px;
+  padding: 12px 16px;
+  color: #111827;
+  background: white;
+  font: inherit;
+  font-weight: 900;
+}
+
+.subnav-tab.active {
+  color: white;
+  background: var(--blue);
 }
 
 button {
@@ -312,11 +345,72 @@ button.blue {
   box-shadow: 4px 4px 0 #111827;
 }
 
-.battle-panel {
+.app-shell {
+  margin-top: 20px;
+  padding: 24px;
+}
+
+.panel-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.95fr 0.95fr;
   gap: 18px;
-  margin-top: 28px;
+}
+
+.match-grid {
+  grid-template-columns: 0.95fr 1.2fr 0.85fr;
+}
+
+.panel-card {
+  padding: 24px;
+}
+
+.panel-card h2 {
+  margin: 0 0 8px;
+}
+
+.action-stack,
+.log-stack,
+.stat-list {
+  display: grid;
+  gap: 12px;
+}
+
+.action-stack {
+  margin-top: 16px;
+}
+
+.action-stack button {
+  width: 100%;
+}
+
+.log-entry,
+.stat-entry {
+  border: 2px solid #111827;
+  border-radius: 18px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 4px 4px 0 rgba(17, 24, 39, 0.4);
+}
+
+.stat-entry {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.xp-meter {
+  margin: 16px 0 18px;
+  overflow: hidden;
+  border: 3px solid #111827;
+  border-radius: 999px;
+  background: white;
+}
+
+.xp-meter span {
+  display: block;
+  height: 18px;
+  background: linear-gradient(90deg, var(--cyan), var(--pink), var(--orange));
 }
 
 article {
@@ -361,7 +455,8 @@ article h2 {
 
 @media (max-width: 820px) {
   .hero,
-  .battle-panel {
+  .panel-grid,
+  .match-grid {
     grid-template-columns: 1fr;
   }
 
